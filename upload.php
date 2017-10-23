@@ -19,7 +19,7 @@ if($_FILES['file']['type']!='application/vnd.ms-excel'){
 	if(move_uploaded_file($_FILES['file']['tmp_name'],$dir.$_FILES['file']['name']))
 	{
 	$user_file_name = $_FILES['file']['name'];		
-	
+	//	move_uploaded_file($_FILES['file']['tmp_name'], $dir);		
 		$filename = $dir.$_FILES['file']['name'];
 		
 		
@@ -45,7 +45,7 @@ $data = fgetcsv($file);
 
 ?>
 <td><h3> <?php echo "You are Uploading the Following File:    <b>".$user_file_name."</b> To the following directory <b>".$dir."</b> </h3> </td></tr>"; ?>
-<tr><td><h3> <a href="index.php"> Upload Another File</a></h3> </td></tr>
+<tr><td><h3><a href="index.php"> Upload another file </a></h3></td></tr>
 
 </table>
 
