@@ -45,6 +45,7 @@ $data = fgetcsv($file);
 
 ?>
 <td><h3> <?php echo "You are Uploading the Following File:    <b>".$user_file_name."</b> To the following directory <b>".$dir."</b> </h3> </td></tr>"; ?>
+<tr><td><h3> <a href="index.php"> Upload Another File</a></h3> </td></tr>
 
 </table>
 
