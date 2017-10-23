@@ -1,3 +1,11 @@
+
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<table class="redTable">
+<tr>
+
 <?php
 
 
@@ -26,13 +34,7 @@ $data = fgetcsv($file);
 
 
 ?>
-<html>
-<head>
-  <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<table class="redTable">
-<tr>
-<td><h3> <?php echo "You are Uploading the Following File <b>".$filename."</b>"; ?></h3> </td></tr>
+<td><h3> <?php echo "You are Uploading the Following File:    <b>".$filename."</b>"; ?></h3> </td></tr>
 </table>
 
 

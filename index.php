@@ -16,9 +16,12 @@
 <div>
 
 
-<?php if(isset($_GET['error']))if($_GET['error'])echo "Error: Close your file before import<br>";?>
+
 
 <table class="redTable">
+
+<?php if(isset($_GET['error']))if($_GET['error'])echo "<tr><td>Error: Close your file before import<br></tr></td>";?>
+
 <tr>
 <td>
 <h2><a href="index.php"> Reset This Form </a><br><br><br>
