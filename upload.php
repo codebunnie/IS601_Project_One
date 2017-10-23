@@ -17,7 +17,7 @@ if($_FILES['file']['type']!='application/vnd.ms-excel'){
 
 
 $file = fopen($filename,"r"); //get the csv file
-echo "You are Uploading the Following File ".$filename."<br>";
+
 //print_r(fgetcsv($file));
 $data = fgetcsv($file);
 
@@ -30,6 +30,13 @@ $data = fgetcsv($file);
 <head>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
+<table class="redTable">
+<tr>
+<td><h3> <?php echo "You are Uploading the Following File <b>".$filename."</b>"; ?></h3> </td></tr>
+</table>
+
+
+
 <table class="redTable">
 
 
