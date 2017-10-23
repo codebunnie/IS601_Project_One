@@ -25,6 +25,11 @@ echo  "TEMP DIRECTORY IS: ". sys_get_temp_dir();
   <input type="file" name="file" id="file" />
   <input type="submit" name="Import" value="Import" />
     <h4>Please Note: Files must be in <b>.CSV</b> format only.</h4>
+	
+	<?PHP
+echo  "TEMP DIRECTORY IS: ". sys_get_temp_dir(); 
+
+?>
 </form>
 
 </div>
