@@ -10,15 +10,18 @@
 
 
 if($_FILES['file']['type']!='application/vnd.ms-excel'){
-	echo "<table class='redTable'> <tr><td>Wrong File type. Only CSV files are allowed to upload. Valid file is '<b>example.CSV</b><br><br><a href='index.php'>Import CSV File</a></td</tr></table>";
+	
+	header('Location: index.php?wrong_file_error=true');
+	
 	die;
 	}
+	
 	if(move_uploaded_file($_FILES['file']['tmp_name'],$_FILES['file']['name']))
 		$filename = $_FILES['file']['name'];
 	else{
-		header('Location: index.php?error=true');
-		echo "Couldn't upload file, Please close the file while importing the file!!";
-		echo "<a href='index.php'>Import CSV File</a>";
+		
+		header('Location: index.php?file_open_error=true');		
+		
 		die;
 	}
 

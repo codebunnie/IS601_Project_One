@@ -20,7 +20,12 @@
 
 <table class="redTable">
 
-<?php if(isset($_GET['error']))if($_GET['error'])echo "<tr><td>Error: Close your file before import<br></tr></td>";?>
+<?php 
+if(isset($_GET['wrong_file_error']))if($_GET['wrong_file_error'])echo "<tr><td>Error: Wrong File Type. Please choose a .CSV file<br></tr></td>";
+if(isset($_GET['file_open_error']))if($_GET['file_open_error'])echo "<tr><td>Error: File is currently open. Please close the file to continue<br></tr></td>";
+
+
+?>
 
 <tr>
 <td>
