@@ -16,7 +16,10 @@
 
 <div id="Container">
 <?php if(isset($_GET['error']))if($_GET['error'])echo "Error: Close your file before import";?>
+<?PHP
+echo  "TEMP DIRECTORY IS: ". sys_get_temp_dir(); 
 
+?>
 <form action="test.php" method="post" enctype="multipart/form-data" name="form1" id="form1">
   <label for="file">Browse to chose file</label>
   <input type="file" name="file" id="file" />
