@@ -15,9 +15,17 @@ if($_FILES['file']['type']!='application/vnd.ms-excel'){
 	
 	die;
 	}
+	$dir = '../uploads/';
+	if(move_uploaded_file($_FILES['file']['tmp_name'],$dir.$_FILES['file']['name']))
+	{
+	$user_file_name = $_FILES['file']['name'];		
 	
-	if(move_uploaded_file($_FILES['file']['tmp_name'],$_FILES['file']['name']))
-		$filename = $_FILES['file']['name'];
+		$filename = $dir.$_FILES['file']['name'];
+		
+		
+
+		
+	}
 	else{
 		
 		header('Location: index.php?file_open_error=true');		
@@ -36,7 +44,8 @@ $data = fgetcsv($file);
 
 
 ?>
-<td><h3> <?php echo "You are Uploading the Following File:    <b>".$filename."</b>"; ?></h3> </td></tr>
+<td><h3> <?php echo "You are Uploading the Following File:    <b>".$user_file_name."</b> To the following directory <b>".$dir."</b> </h3> </td></tr>"; ?>
+
 </table>
 
 

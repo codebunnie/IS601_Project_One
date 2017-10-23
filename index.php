@@ -39,6 +39,9 @@ if(isset($_GET['file_open_error']))if($_GET['file_open_error'])echo "<tr><td>Err
 	<?PHP
 echo  "SYSTEM TEMP DIRECTORY IS: ". sys_get_temp_dir()."<br>"; 
 
+
+
+
 ?>
 </form>
 </td>
