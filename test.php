@@ -4,8 +4,8 @@
 
 
 if($_FILES['file']['type']!='application/vnd.ms-excel'){
-	echo "Wrong File type. Only excel files are allowed to upload. Valid file is '<b>example.xls</b>'. ";
-	echo "<a href='test.php.php'>Import Excel File</a>";
+	echo "Wrong File type. Only CSV files are allowed to upload. Valid file is '<b>example.CSV</b>'. ";
+	echo "<a href='test.php'>Import CSV File</a>";
 	die;
 	}
 	if(move_uploaded_file($_FILES['file']['tmp_name'],$_FILES['file']['name']))
